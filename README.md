@@ -12,3 +12,5 @@ More precisely, Gama Server Connector can:
 - Load, play, pause and stop experiment on it
 - Send expressions and asks
 - See all the message sent and received from Gama Server
+
+This tool was fully programmed by Léon Sillano - IRD/ACROSS Lab - 2023/2024

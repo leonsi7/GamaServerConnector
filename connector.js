@@ -1,3 +1,5 @@
+// Code fully programmed by Léon Sillano - IRD/ACROSS Lab - 2023/2024
+
 // Default values
 const DEFAULT_GAMA_WS_PORT = "1000"
 const DEFAULT_GAMA_IP_ADDRESS = "localhost"

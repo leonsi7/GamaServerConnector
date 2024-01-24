@@ -1,16 +1,16 @@
 # Gama Server Connector
 
-Gama Server Connector creates a websocket client of Gama Server. It was made for understanding Gama Server and his communication protocol: It allows the user to understand how to make customized requests (play, pause, expression,...).
+Gama Server Connector creates a websocket client of Gama Server. It has been designed to understand Gama Server and its communication protocol: it enables the user to understand how to make customized requests (read, pause, express, etc.).
 
 For more information on Gama Server: [gama-platform.org](https://gama-platform.org/wiki/HeadlessServer)
 
-This following links is the documentation that shows an exhaustive list of all requests that can be send to Gama Server. This tool impemented most of them.
+The following links provide an exhaustive list of all the queries that can be sent to the Gama server. This tool has implemented most of them.
 
 
-More precisely, Gama Server Connector can:
-- Connect to Gama Server
-- Load, play, pause and stop experiment on it
-- Send expressions and asks
-- See all the message sent and received from Gama Server
+Specifically, Gama Server Connector can :
+- connect to the Gama server
+- load, play, pause and stop an experiment on the server
+- send expressions and requests
+- View all messages sent and received from the Gama server
 
-This tool was fully programmed by Léon Sillano - IRD/ACROSS Lab - 2023/2024
+This tool was entirely programmed by Léon Sillano - IRD/ACROSS Lab - 2023/2024

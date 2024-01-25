@@ -1,4 +1,14 @@
 /* Code fully programmed by Léon Sillano - IRD/ACROSS Lab - 2023/2024 */
+:root {
+    --b-radius: 5px;
+
+    --main-color: #1B1B1D;
+    --background: #1B1B1D;
+    --color-font: #ffffff;
+    --item-color: #282A36;
+    --title-color: #EBEDF0;
+}
+
 
 h1, h2, p {
     margin: 0;
@@ -10,15 +20,17 @@ h1 {
     color: #ffffff;
     margin: 20px 0 0;
     text-align: center;
-    background-color: #0074d9;
+    background-color: var(--background);
     padding: 20px;
     width: 100%;
 }
 
 h2 {
-    color: #0074d9;
+    color: var(--title-color);
     position: relative;
-    text-align: left;
+    text-align: center;
+    margin-left: 13px;
+    margin-right: 13px;
     margin-top: 25px;
     margin-bottom: 20px;
 }
@@ -29,20 +41,32 @@ h2::after {
     top: 100%;
     left: 0;
     width: 100%;
-    height: 4px;
-    background-color: #0074d9;
+    height: 2px;
+    background-color: var(--title-color);
     text-align: center;
 }
 
 body {
     font-family: 'Arial', sans-serif;
-    background-color: #f2f2f2;
+    color:var(--color-font);
+    background-color: var(--background);
+}
+
+.content {
+    display: flex;
+    flex-direction: row;
+    width: 100%;
+    
+}
+
+.content-item {
+    width: 50%;
 }
 
 
 /* Button styles */
 .round-button {
-    background-color: #0074d9;
+    background-color: var(--main-color);
     color: #fff;
     border: none;
     cursor: pointer;
@@ -51,20 +75,29 @@ body {
     transition: background-color 0.3s;
     text-align: center;
     display: inline-block;
-    border-radius: 100%;
+    border-radius: 20%;
     text-align: center;
     text-decoration: none;
     cursor: pointer;
-    width:40px;
-    height: 40px;
+    width:33px;
+    height: 33px;
 }
 
 .round-button:hover {
-    background-color: #0056a1;
+    background-color: #D36737;
+}
+
+.control-button {
+    opacity: 0.8;
+    transition: background-color 0.3s;
+}
+
+.control-button:hover {
+    opacity: 1;
 }
 
 .square-button {
-    background-color: #0074d9;
+    background-color: var(--main-color);
     color: #fff;
     border: none;
     padding: 10px 20px;
@@ -77,8 +110,29 @@ body {
 }
 
 .square-button:hover {
-    background-color: #0056a1;
+    background-color: #D36737;
 }
+
+.square-button-step {
+    background-color: var(--main-color);
+    color: #fff;
+    border: none;
+    padding: 10px 20px;
+    cursor: pointer;
+    font-size: 12px;
+    margin: 3px;
+    border-radius: 5px;
+    transition: background-color 0.3s;
+    text-align: center;
+    align-items: center;
+    width: 30%;
+}
+
+.square-button-step:hover {
+    background-color: #D36737;
+}
+
+
 
 .grid-container {
   display: grid;
@@ -89,12 +143,12 @@ body {
 }
 
 .grid-item {
-  border: 1px solid #ddd;
+  /* border: 1px solid #ddd; */
   padding: 20px;
   display: flex;
   flex-direction: column;
-  border-radius: 15px;
-  background-color: #c5e0f7;
+  border-radius: var(--b-radius);
+  background-color: var(--item-color);
 }
 
 .name-container {
@@ -122,6 +176,7 @@ body {
 }
 
 .content-container-column {
+    margin-top: 5px;
   width: 100%;
   height: 100%;
   display: flex;
@@ -144,17 +199,18 @@ body {
     flex-direction: row;
     width: 100%;
     height: 50%; 
-    justify-content: center;
+    justify-content: left;
+    align-items: center;
 }
 
 .expr-ask-item{
     margin: 10px;
-    border: 1px solid #ddd;
+    /* border: 1px solid #ddd; */
     padding: 20px;
     display: flex;
     flex-direction: column;
-    border-radius: 15px;
-    background-color: #c5e0f7;
+    border-radius: var(--b-radius);
+    background-color: var(--item-color);
   }
 
 .name-expr-ask  {
@@ -163,10 +219,18 @@ body {
 
 .content-expr-ask-div {
     margin: 10px;
-    height: 50px;
+    height: 25px;
 }
 input {
-    height: 40px;
+    height: 30px;
+    border-radius: var(--b-radius);
+    border: none;
+    padding-left: 0.4rem;
+}
+
+#gama-address {
+    font-family: 'Courier';
+    text-decoration: underline;
 }
 
 #request-response-title {
@@ -184,21 +248,21 @@ input {
 }
 
 .request {
-    border-radius: 15px;
+    border-radius: var(--b-radius);
     margin: 10px;
     padding: 10px;
-    border: 2px solid #ccc;
-    background-color: #f9f9f9;
+    /* border: 2px solid #ccc; */
+    background-color: var(--item-color);
     display: flex;
     flex-direction: column;
 }
 
 .response {
-    border-radius: 15px;
+    border-radius: var(--b-radius);
     margin: 10px;
     padding: 10px;
-    border: 2px solid #ccc;
-    background-color: #f9f9f9;
+    /* border: 2px solid #ccc; */
+    background-color: var(--item-color);
     display: flex;
     flex-direction: column;
 }

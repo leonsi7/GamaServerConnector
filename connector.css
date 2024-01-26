@@ -74,6 +74,11 @@ body {
     }
 }
 
+#request-response-timeline {
+    height: 100vh;
+    overflow-y: auto;
+}
+
 
 /* Button styles */
 .round-button {

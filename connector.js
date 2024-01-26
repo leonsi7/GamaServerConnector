@@ -39,6 +39,13 @@ function load_experiment() {
     "experiment": experiment_name
     }
 }
+
+function reload_experiment() {
+    return {
+        "type":"reload",
+        "exp_id":experiment_id
+    }
+}
 function play_experiment() {
     return{
         "type": "play",
@@ -130,6 +137,7 @@ function createWebSocketClient() {
             const message = JSON.parse(event.data)
             switch (message.type) {
                 case "SimulationStatus":
+                    experiment_id = message.exp_id
                     switch (message.content) {
                         case NONE: setGamaState(NONE); break;
                         case NOTREADY: setGamaState(NOTREADY); break;
@@ -169,15 +177,18 @@ function load() {
         logRequest("Gama Server is not connected")
         return
     }
-    if ([NOTREADY, PAUSED, RUNNING].includes(gama_state)) {
-        logRequest("Could not send Load since Gama Server is already running an experiment")
+    if ([NOTREADY, PAUSED, RUNNING].includes(gama_state) && model_file != undefined && experiment_name != undefined) {
+        socket.send(JSON.stringify(reload_experiment()))
+        logRequest(reload_experiment())
+        return
     }
-    else if (model_file != undefined && experiment_name != undefined) {
+    if ([UNKNOWN, NONE].includes(gama_state) && model_file != undefined && experiment_name != undefined) {
         socket.send(JSON.stringify(load_experiment()))
         logRequest(load_experiment())
+        return
     }
     else {
-        logRequest("Could not send Load since the model file or the experiment name is undefined")
+        logRequest("Could not send Load or Reload since the model file or the experiment name is undefined")
     }
 }
 

@@ -310,7 +310,7 @@ function sendStep() {
 }
 
 function sendStepBack() {
-    current_nb_step = document.querySelector("#nb-step-back-input").value
+    current_nb_step_back = document.querySelector("#nb-step-back-input").value
     stepBack()
 }
 

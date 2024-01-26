@@ -66,7 +66,7 @@ body {
 @media (min-width: 1101px) {
     .content {
         display: flex;
-        flex-direction: column;    
+        flex-direction: row;    
     }
 
     .content-item {
@@ -82,9 +82,8 @@ body {
     border: none;
     cursor: pointer;
     font-size: 18px;
-    margin: 5px;
+    margin-left: 5px;
     transition: background-color 0.3s;
-    text-align: center;
     display: inline-block;
     border-radius: 20%;
     text-align: center;
@@ -242,6 +241,20 @@ input {
 #gama-address {
     font-family: 'Courier';
     text-decoration: underline;
+}
+
+#ask-div {
+    height: 100px;
+
+}
+
+#args-ask-input {
+    border-radius: var(--b-radius);
+    box-sizing: border-box;
+    resize: none; /* Permet à l'utilisateur de redimensionner verticalement */
+    overflow-y: visible; /* Pour cacher la scrollbar de la textarea */
+    border: none;
+    height: 100%;
 }
 
 #request-response-title {

@@ -50,14 +50,14 @@
     </div>
     <h2 class="with-bar-left">FAQ</h2>
     <div class="text">
-        Why sometimes I have no response when I want to load an experiment ?<br>
+        <h3>Why sometimes I have no response when I want to load an experiment ?</h3>
         <ul class="text">
             <li>When you reload an experiment, GAMA asks you, via an internal pop-up window, if you're sure you want to do it.
                 When this happens, you must answer "yes" and GAMA will immediately respond to the loading of the results you previously sent. <br>
                 If you want to avoid this probem, I suggest to set the global variable pref_experiment_ask_closing to false in the init of the global of your model.
             </li>
         </ul>
-        Why can't the connector connect to Gama Server?
+        <h3>Why can't the connector connect to Gama Server?</h3>
         <ul class="text">
             <li>I'll be very clear on this point: if you can't connect to the Gama server, it's either because you haven't specified the right connection port, 
                 or because the Gama Server port hasn't been launched. In no case is it a connector problem. 
@@ -65,7 +65,7 @@
                 then save your preferences. Then restart it. This action resets Gama Server.
             </li>
         </ul>
-        Why the Gama Server simulation status is UNKNOWN when I'm connecting to Gama Server ?
+        <h3>Why the Gama Server simulation status is UNKNOWN when I'm connecting to Gama Server ?</h3>
         <ul class="text">
             <li>Simulation status is the state of Gama Server: is a simulation running?
                  is it paused? The connector knows this status when it receives a SimlationStatus message.
